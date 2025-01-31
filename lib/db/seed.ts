@@ -1,11 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import data from '@/lib/data'
 import { connectToDatabase } from '.'
 import User from './models/user.model'
 import Product from './models/product.model'
 import Review from './models/review.model'
-import { cwd } from 'process'
-import { loadEnvConfig } from '@next/env'
 import Order from './models/order.model'
 import {
   calculateFutureDate,
@@ -16,8 +13,6 @@ import {
 import WebPage from './models/web-page.model'
 import Setting from './models/setting.model'
 import { OrderItem, IOrderInput, ShippingAddress } from '@/types'
-
-loadEnvConfig(cwd())
 
 const main = async () => {
   try {
